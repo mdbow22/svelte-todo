@@ -1,9 +1,10 @@
 <script>
-
+  import Card from './lib/Card.svelte';
 </script>
 
 <main> 
   <h1>What To-Do?</h1>
+  <Card></Card>
 </main>
 
 <style>
