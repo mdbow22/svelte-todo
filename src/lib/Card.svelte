@@ -7,8 +7,8 @@
 
 <style>
 
-    .card {
-        width: 100%;
+    .card {  
+        width: 100%;   
         height: 4em;
         border: 1px solid #190028;
         background-color: #F9EFFF;
