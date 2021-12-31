@@ -32,7 +32,7 @@
 
 <form on:submit|preventDefault={addToDo}>
     <div class="inputs">
-      <input type="text" bind:value={task} class="toDoInput" placeholder="Yet another task..." />
+      <input type="text" bind:value={task} class="toDoInput" placeholder="Tell us the task which must be done..." />
     </div>
     <button type="submit" class="btnSubmit">Add</button>
 </form>
