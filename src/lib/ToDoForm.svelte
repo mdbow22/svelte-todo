@@ -39,17 +39,20 @@
 
 <style>
   form {
-    display: grid;
-    grid-template-columns: 5fr 1fr;
+    display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+  }
+
+  .inputs {
+      min-width: 75%;
   }
 
   .toDoInput {
     border: none;
     background-color: transparent;
-    width: 90%;
+    width: 100%;
     font-size: 1.5em;
     font-weight: bold;
     color: #190028;
@@ -68,6 +71,8 @@
     color: #190028;
     font-weight: bold;
     cursor: pointer;
+    line-height: 1.75em;
+    flex-basis: 100px;
   }
 
   .btnSubmit:active {

@@ -2,24 +2,20 @@
   import Card from './lib/Card.svelte';
   import ToDoForm from './lib/ToDoForm.svelte';
   import ToDoList from './lib/ToDoList.svelte';
-  import { ToDos } from './stores';
-
- 
-
 </script>
 
 <main> 
   <h1>What To-Do?</h1>
-  <Card>
-    <div class="flex">
-      <ToDoForm />
-    </div>
-    
-  </Card>
-
-  {#each $ToDos as todo (todo.id)}
-    <p>{todo.task}</p>
-  {/each}
+  <div class="top">
+    <Card>
+      <div class="flex">
+        <ToDoForm />
+      </div>
+    </Card>
+  </div>
+  <div class="list">
+    <ToDoList />
+  </div>
 </main>
 
 <style>
@@ -33,6 +29,10 @@
     text-align: center;
     margin-top: 50px;
     font-size: 4.5em;
+  }
+
+  .top {
+    margin-bottom: 50px;
   }
 
   .flex {
