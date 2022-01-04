@@ -57,10 +57,10 @@
 </script>
 
 <div class="card-container">
-    <input class={todo.done ? 'to-do-item finished' : 'to-do-item'} type="text" bind:value={task} on:blur={updateToDo} /> 
+    <input class="to-do-item" type="text" bind:value={task} on:blur={updateToDo} /> 
 
     <div class="item-buttons">
-        <button type="btn" on:click|preventDefault={completeTask}><i class="fas fa-check"></i></button>
+        <button type="btn" on:click|preventDefault={completeTask}><i class={todo.done ? 'fas fa-check finished' : 'fas fa-check'}></i></button>
         <button type="btn" on:click|preventDefault={deleteTask}><i class="fas fa-times"></i></button>
     </div>
 </div>
@@ -81,6 +81,7 @@
         font-weight: bold;
         color: #190028;
         min-width: 75%;
+        
     }
 
     .to-do-item:focus {
@@ -113,7 +114,6 @@
     }
 
     .finished {
-        text-decoration: line-through;
-        color: green;
+        color: rgb(0, 194, 0);
     }
 </style>

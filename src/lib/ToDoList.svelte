@@ -1,4 +1,6 @@
 <script>
+    import { fade, scale } from 'svelte/transition';
+    import { flip } from 'svelte/animate';
     import { ToDos } from '../stores';
     import Card from './Card.svelte';
     import ToDoItem from './ToDoItem.svelte';
@@ -7,7 +9,7 @@
 
 
 {#each $ToDos as todo (todo.id)}
-    <div class="to-do">
+    <div animate:flip transition:fade class="to-do">
     <Card>
         <ToDoItem {todo} />
     </Card>
